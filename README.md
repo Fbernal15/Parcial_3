@@ -1,2 +1,4 @@
 # Parcial_3
-Fandry Lizeth Bernal
+#integrantes:
+- Jaider Santiago Peña Basto - 2205082
+- Fandry Lizeth Bernal - 2205619
