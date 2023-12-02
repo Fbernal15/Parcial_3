@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Borrar notas{% endblock %}
+
+{% block principal %}
+<h1 class="display-3" id="title">Eliminar nota</h1>
+<p>Eliminar nota</p>
+<form method="POST">
+    <!-- Security token by Django -->
+    {% csrf_token %}
+    Esta seguro de eliminar la nota?
+    <input href="{% url 'index' %}" type="submit" value="Si"  class="btn btn-success"  />
+    <a href="{% url 'index' %}"  class="btn btn-danger" >Cancel </a>
+</form> 
+{% endblock %}

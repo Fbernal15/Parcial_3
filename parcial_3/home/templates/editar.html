@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Editar notas{% endblock %}
+
+{% block principal %}
+<div class=" principal"> 
+    <form enctype="multipart/form-data" method="post"> 
+     {% csrf_token %}
+     
+     <label for="titulo">Titulo</label>
+     <textarea type="text" id="titulo" name="titulo" required>{{nota.titulo}}</textarea>
+
+     <label for="nota"><b>Nota:</b></label>
+     <textarea name="nota" id="nota" >{{nota.nota}}</textarea>
+     
+     <button  class="principal_b">Guardar</button>
+     <a href="{% url 'index' %}" class="principal_b" >Cancelar </a>
+
+    </form>
+
+</div>
+
+{% endblock %}

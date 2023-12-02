@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Nueva notas{% endblock %}
+
+{% block principal %}
+<div class=" principal"> 
+    <form action="{% url 'nueva' %}" method="post"> 
+     {% csrf_token %}
+     
+     <label for="titulo">Titulo</label>
+     <input type="text" id="titulo" name="titulo" required>
+
+     <label for="nota"><b>Nota:</b></label>
+     <textarea name="nota" id="nota" ></textarea>
+     
+     <button  class="principal_b">Guardar</button>
+     <a href="{% url 'index' %}" class="principal_b" >Cancelar </a>
+
+    </form>
+
+</div>
+{% endblock %}

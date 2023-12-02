@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Ver notas{% endblock %}
+
+{% block principal %}
+<div class=" principal">
+      <form method="post" enctype="multipart/form-data"> 
+        {% csrf_token %}
+        
+        <label for="titulo">Titulo</label>
+        <p type="text" id="titulo" name="titulo">{{ nota.titulo}}</p>
+   
+        <label for="nota"><b>Nota:</b></label>
+        <p name="nota" id="nota" >{{ nota.nota}}</p>
+
+        <label for="fecha"><b>Fecha:</b></label>
+        <p name="fecha" id="fecha" rows="8" >{{nota.fecha}}</p>
+        
+      
+        <a href="{% url 'index' %}" class="principal_b" >Volver </a>
+   
+       </form>
+
+</div>
+{% endblock %}

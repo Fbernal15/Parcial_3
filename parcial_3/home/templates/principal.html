@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}App notas{% endblock %}
+
+{% block principal %}
+
+   <div class="principal">
+    <h1>Bienvenido a Notas</h1>
+    <a class="principal_b" href="{% url 'login' %}">Iniciar sesión</a>
+    <a class="principal_b" href="{% url 'registro' %}">Registrarse</a>
+   </div>
+
+{% endblock %}
